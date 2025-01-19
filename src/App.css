@@ -1,0 +1,332 @@
+/* styles.css */
+body {
+  font-family: "Bodoni Moda", serif;
+  max-width: "100%";
+  overflow-x: hidden;
+}
+
+.welcome {
+  color: #2b609c;
+  text-size-adjust: inherit;
+}
+
+#logo{
+  display: block;
+  max-width: 150px;
+}
+
+#AboutUS {
+  content: normal;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.me-auto my-2 my-lg-0 link {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #444;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  float: right;
+}
+
+#head2{
+  font-family: "Franklin Gothic Medium, Arial Narrow, Arial, sans-serif";
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: all 2.2s cubic-bezier(0.5, 0, 0, 1) 0.01s, opacity 2.2s cubic-bezier(0.5, 0, 0, 1) 0.01s, transform 2.2s cubic-bezier(0.5, 0, 0, 1) 0.01s;
+  padding: 0px;
+  font-weight: 900;
+  font-size: 50px;
+  margin: 0px;
+  color: transparent;
+  -webkit-text-stroke: 2px #795548;
+  display: block;
+  align-items: center;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+#headalt{
+  font-size: 20px;
+  text-align: justify;
+}
+
+.cursor {
+  cursor: pointer;
+  position: absolute;
+  width: '20px';
+  height: 20px;
+  background: transparent;
+  border: 2px solid rgb(26, 67, 61);
+  border-radius: 50%;
+  pointer-events: auto;
+  transform: translate(0%, 0%);
+  z-index: '1000';
+  transition: all 0.1s ease-out;
+}
+
+a.nav-link{
+  border-bottom: 2px solid #F8FAFC ;
+  transition: all 3ms ease-in-out;
+  cursor: pointer;
+  margin: 0px 5px;
+}
+a.nav-link:hover{
+  border-bottom: 2px solid black ;
+  transition: all 3ms ease-in-out;
+}
+
+.productContainer{
+  display: flex;
+  flex-Direction: "row";
+  justify-content: center;
+  height: 'auto';
+  padding: '100px';
+}
+
+.productDetail{
+  margin: auto;
+  text-align: justify;
+}
+
+#ProductButton{
+  margin-Top: "20px";
+  display: "flex";
+  flex-Direction: "row";
+  position: "absolute";
+  top: "125%";
+  left: "68%";
+  width: "100%";
+}
+
+#AboutContainer{
+  display: flex;
+  flex-Direction: "row";
+  justify-Content: "center";
+  align-items: center;
+}
+#AboutContainer img{
+  width: 50%;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.left h3{ font-size: 24px;}
+.left p{ font-size: 16px;}
+.left iframe{ width: 70%; height: 50%;}
+
+.right h2{ font-size: 24px;}
+.right form{ font-size: 16px;}
+
+.form-group label{ font-size: 15px; color: "#333"; margin-Bottom: "5px"; font-Weight: "bold"}
+  .form-group input{ 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #0c0000;
+    border-style: dashed;
+    margin: auto;
+  }
+
+
+@media only screen and (max-width: 600px) {
+  
+  .footer{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left h3{ font-size: 15px;}
+  .left p{ font-size: 10px;}
+  .left iframe{ width: 100%; height: auto;}
+
+  .right{
+    height: 400px;
+  }
+  .right h2{ font-size: 15px;}
+  .right form{ font-size: 10px;}
+  .form-group label{ font-size: 10px; color: "#333"; margin-Bottom: "5px"; font-Weight: "bold"}
+  .form-group input{  
+    width: 100%;
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 4px;
+    border: 1px solid #0c0000;
+    border-style: solid;
+  }
+
+
+  #AboutContainer{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #AboutContainer img{
+    width: 100%;
+  }
+
+  #AboutContainer p{
+    font-size: 10px;
+  }
+
+  .productDetail{
+    margin: auto;
+    padding: 10px;
+  }
+
+  .Productimgs imd{
+    width: 100%;
+  }
+
+  .productDetail h1{font-size: 20px; text-align: center; } 
+
+  .productDetail p{ font-size: 10px;text-align: justify; }
+
+  .productContainer{
+    flex-Direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  #ProductButton{
+  margin-Top: "20px";
+  display: "flex";
+  flex-Direction: "row";
+  position: "absolute";
+  top: "125%";
+  left: "68%";
+  width: "100%";
+  }
+
+
+  #Product h2{
+    font-size: 15px;
+  }
+  #Product h3{
+    font-size: 10px;
+  }
+
+  .column {
+    width: 50%;
+  }
+
+  .homeimg {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0.6;
+  }
+
+  #head2 {
+    font-size: 25PX;
+  }
+  #headalt {
+    font-size: 10px;
+    text-align: justify;
+  }
+
+  .homeimg:hover {
+    opacity: 1;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .me-auto my-2 my-lg-0 link {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #444;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    float: right;
+  }
+
+  .cursor {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid rgb(26, 67, 61);
+    border-radius: 50%;
+    pointer-events: auto;
+    transform: translate(0%, 0%);
+    z-index: 1000;
+    transition: all 0.1s ease-out;
+  }
+
+  a.nav-link {
+    border-bottom: 2px solid #f8fafc;
+    transition: all 3ms ease-in-out;
+    cursor: pointer;
+    margin: 0px 5px;
+  }
+
+  a.nav-link:hover {
+    border-bottom: 2px solid black;
+    transition: all 3ms ease-in-out;
+  }
+
+  .navbar-toggler-icon :active ~ .navtog{
+    display: block;
+  }
+  
+  .me-auto my-2 my-lg-0 navbar-nav navbar-nav-scroll {
+    margin: 0%;
+  }
+
+  #homebuttons{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    color: #000408;
+    width:20%;
+    height: 25%;
+  }
+
+  .Hbtn{
+    color: #000000;
+    background-color: #dbe2ef;
+    width: auto;
+    height: auto;
+  }
+
+  .Pbtn{
+    color: #000000;
+    background-color: #dbe2ef;
+    width: auto;
+    height: auto;
+  }
+
+
+}
