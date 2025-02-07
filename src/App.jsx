@@ -1,20 +1,21 @@
 import "./App.css";
-import Nevbar from "./com/Nevbar";
-import Con from "./com/Con";
-import Footer from "./com/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import $ from "jquery";
-import Popper from "popper.js";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Start from "./Start";
+import Products from "./com/Products.JSX";
+import About from "./com/About.JSX";
+import Contact from "./com/ContactUs.JSX";
 
-function App() {
+export default function App() {
   return (
-    <>
-      <Nevbar />
-      <Con />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Start />} />
+        <Route path="/Home" element={<Start />} />
+        <Route path="/Products" element={<Products />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

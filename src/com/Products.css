@@ -1,0 +1,80 @@
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 120px;
+    margin-left: 5%;
+    width: 90%;
+}
+
+img{
+    width: 25%;
+    height: auto;
+    margin: 10px;
+}
+
+.Fruits, .Spices, .Vegetables, .cerealpulses{
+   padding: 20px; text-align: center; 
+   background-color: #D9EAFD;
+   
+}
+
+.FruitsImg, .SpicesImg, .VegetablesImg, .cerealpulsesImg{
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+.product .h1, h1{
+    text-align: center;
+    font-weight: bold;
+    font-size:xxx-large;
+    color: #39548e;
+}
+
+.cerealpulses, .Fruits, .Spices, .Vegetables{
+    margin-bottom: 100px;
+}
+
+.contain{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contain span{
+    padding: 5px;
+    font-weight: bold;
+    color: #39548e;
+    font-size: larger;
+}
+
+@media only screen and (max-width: 600px){
+
+    .product .h1, h1{
+        font-size: x-large;
+    }
+    
+    img{
+        margin: 5px;
+    }
+
+    .cerealpulses, .Fruits, .Spices, .Vegetables{
+        margin-bottom: 40px;
+    }
+
+    .contain{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .contain span{
+        font-size: 8px;
+        margin: 5px;
+    }
+
+    .FruitsImg, .SpicesImg, .VegetablesImg, .cerealpulsesImg{
+        margin: 10px;
+    }
+}

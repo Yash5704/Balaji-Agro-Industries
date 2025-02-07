@@ -1,176 +1,72 @@
+import js from "@eslint/js";
 import React, { useState } from "react";
 import styled from 'styled-components';
+import { SiInstagram } from "react-icons/si";
+import { FaLinkedinIn } from "react-icons/fa";
+import { ImFacebook2 } from "react-icons/im";
+import { IoCallOutline } from "react-icons/io5";
+import { CiMail } from "react-icons/ci";
 
-const StyledText = styled.div`
-  font-family: 'Bodoni Moda', serif;
-`;
+const StyledText = styled.div`font-family: 'Bodoni Moda', serif;`;
 
 // Footer Component
 function Footer() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    mobile: ''
-  });
-
-  // Handle form input changes
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value
-    }));
-  };
-
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Form submitted with data: ${JSON.stringify(formData)}`);
-  };
-
+  
   return (
+
     <StyledText>
+      <div className="footercontainer">
+        <section  id="footer"  className="footer" >
+          <div className="left">
+              <h2>Balaji Agro Industries</h2>
+              <p>'Balaji Agro Industries' is a team rooted to farmer’s background. The founders started the company by taking inspiration from their father who is a farmer.</p>
+          </div>
 
-      <div
-        id="contactUs" // The id to which we will scroll
-        className="footer"
-        style={{
-          backgroundColor: "#f4f4f4",
-          padding: "40px",
-          borderTop: "1px solid #ddd",
-          backgroundColor: "#9AA6B2"  // Ensures responsiveness
-        }}
-      >
-        {/* Left Section with Company Info */}
-        <div
-          className="left"
-          style={{
-            width: "45%",
-            maxWidth: "500px",
-            marginBottom: "20px", // Adds margin to bottom for spacing
-          }}
-        >
-          <h3 style={{ color: "#333", fontWeight: "bold" }}>
-            Balaji Agro Industries
-          </h3>
-          <p style={{ color: "#555", lineHeight: "1.6" }}>
-            Shop no.4, Dhangdhra Road APMC (Agricultural Produce Market Committee), Halvad, Gujarat, 363330
-          </p>
+          <div className="Profooter">
+            <h2>Product</h2>
+            <p>
+            Fruits <br />
+            Vegetables <br />
+            Spices <br />
+            Cereal and Pulses
+            </p>
+          </div>
 
-          <p>📞 : +91 9913885609, 9825314030</p>
-          <p>✉️ : balajiagroind2015@gmail.com</p>
-        </div>
+          <div className="Confooter">
+            <h2>Contact</h2>
+            <p>
+              <a href="tel:+919913885609"><IoCallOutline />: 9913885609  </a>
+              <br/> 
+              <a href="tel:+919825314030"><IoCallOutline /> : 9825314030 </a>
+              <br/>
+              <a href="mailto:balajiagroind2015@gmail.com"><CiMail /> : balajiagroind2015@gmail.com</a>
+              <br />
+              
+                <span style={{display:"flex"}}>
+                <a href=""><ImFacebook2 /></a> 
+                <br />
+                <a href="https://www.instagram.com/balajiagroind2015?igsh=MXJiYW01bmZubmlvbg=="><SiInstagram /></a> 
+                <br />
+                <a href="https://www.linkedin.com/in/balaji-agroind-6156bb195"><FaLinkedinIn /></a>
+                </span>
+            </p>  
+          </div>
 
-        {/* Right Section with Registration Form */}
-        <div
-          className="right"
-          style={{
-            width: "45%",
-            maxWidth: "500px",
-            padding: "20px",
-            backgroundColor: "#fff",
-            borderRadius: "8px",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-            marginBottom: "20px", // Adds margin to bottom for spacing
-          }}
-          >
-          <h2 style={{ fontSize: 'auto', color: "#333", marginBottom: "20px" }}>
-            Contact US
-          </h2>
-          <form onSubmit={handleSubmit} className="form" style={{ display: "flex", flexDirection: "column" }}>
+          <div className="Locfooter">
+            <h2>Location</h2>
+            <p>
+                  Shop no.4, Dhangdhra Road APMC (Agricultural Produce Market Committee), Halvad, Gujarat, 363330
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117512.44102836844!2d71.05207256934693!3d23.014085000000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395bd5340c040881%3A0xe93cbce8c860535d!2sBalaji%20Agro%20Products!5e0!3m2!1sen!2sin!4v1738185702220!5m2!1sen!2sin"></iframe>
+          </div>
+        </section>
 
-            {/* First Name */}
-            <div className="form-group" style={{ marginBottom: "20px" }}>
-              <label
-                htmlFor="firstName"
-                
-              >
-              First Name:
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleInputChange}
-                required
-                
-              />
-            </div>
+        <section>
+          <div className="copyright">
+            <p><span>© 2025 Balaji Agro Industries All Rights Reserved</span></p>
+          </div>
+        </section>
 
-            {/* Last Name */}
-            <div className="form-group" style={{ marginBottom: "20px" }}>
-              <label
-                htmlFor="lastName"
-              >
-                Last Name:
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleInputChange}
-                required
-                
-              />
-            </div>
-
-            {/* Email */}
-            <div className="form-group" style={{ marginBottom: "20px" }}>
-              <label
-                htmlFor="email"
-              >
-                Email:
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-
-            {/* Mobile Number */}
-            <div className="form-group" style={{ marginBottom: "20px" }}>
-              <label
-                htmlFor="mobile"
-              >
-                Mobile:
-              </label>
-              <input
-                type="tel"
-                id="mobile"
-                name="mobile"
-                value={formData.mobile}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              style={{
-                padding: "12px 20px",
-                fontSize: "16px",
-                backgroundColor: "#3f51b5",
-                color: "white",
-                border: "none",
-                borderRadius: "4px",
-                cursor: "pointer",
-                transition: "background-color 0.3s",
-              }}
-              onMouseOver={(e) => (e.target.style.backgroundColor = "#2c387e")}
-              onMouseOut={(e) => (e.target.style.backgroundColor = "#3f51b5")}
-            >
-              Submit
-            </button>
-          </form>
-        </div>
       </div>
     </StyledText>
   );

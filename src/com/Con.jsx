@@ -6,13 +6,10 @@ import Cotton from "../Photos/producct/AdobeStock_136921602.jpeg";
 import CuminSeeds from "../Photos/producct/Cumin Seeds.jpeg";
 import variyali from "../Photos/producct/variyali .jpeg";
 import temp1 from "../Photos/producct/Untitled design.png";
-import temp6 from "../Photos/backgrond/jpeg6.jpeg";
-import temp7 from "../Photos/backgrond/jpeg7.jpeg";
-import temp8 from "../Photos/backgrond/jpeg8.jpeg";
-import temp12 from "../Photos/backgrond/jpeg12.jpeg";
 import temp13 from "../Photos/producct/Untitled design (1).png";
 import about from "../Photos/backgrond/Export_1.jpg";
 import styled from "styled-components";
+import { Fade, Slide, Zoom } from 'react-reveal';
 
 const StyledText = styled.div`
   font-family: "Bodoni Moda", serif;
@@ -121,38 +118,14 @@ function Con() {
   return (
     <>
       <StyledText>
+        <div className="Start">
         {/* home */}
-        <div
-          id="Home"
-          style={{
-            textAlign: "center",
-            maxWidth: "100%",
-            width: "100%",
-            height: "auto",
-            boxSizing: "border-box",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-          }}
-        >
-          <div
-            className="homeimg"
-            style={{
-              position: "relative",
-              width: "100%",
-              height: "80vh",
-              transform: "",
-            }}
-          >
-            <img
+        <div id="Home">
+          <div className="homeimg">
+             <Zoom><img
               src={myhome[homeIndex].imgPath}
               alt={myhome[homeIndex].label}
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: "100%",
-                transition: "opacity 0.5s ease-in-out",
-                opacity: "0.6",
-              }}
-            />
+            /></Zoom>
 
             <div
               style={{
@@ -164,29 +137,16 @@ function Con() {
                 height: "50%",
                 width: "50%",
                 right: "25%",
-              }}
-            >
-              <div>
-                <div
-                  style={{
-                    color: "black",
-                    fontSize: "20px",
-                    textAlign: "center",
-                    right: "25%",
-                  }}
-                >
-                  <h1 id="head2">
-                    {myhome[homeIndex].name}
-                  </h1>
-                  <p id ='headalt'>
-                    {myhome[homeIndex].text}
-                  </p>
+              }}>
+            
+                <div className="imgdes">
+                <Fade right duration={3000}><h1 id="head2"> {myhome[homeIndex].name}  </h1></Fade>
+                <Fade left duration={3000}><p id ='headalt'> {myhome[homeIndex].text} </p></Fade>
                 </div>
-              </div>
 
               <div id='homebuttons' style={{ alignItems: "center" }}>
                 
-                <button class="Hbtn" onClick={goToPrev} style={buttonStyle}>
+                <button className="Hbtn" onClick={goToPrev}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="24px"
@@ -198,12 +158,7 @@ function Con() {
                   </svg>
                 </button>
 
-                <button
-                  class="Hbtn"
-                  onClick={goToNext}
-                  type="home"
-                  style={buttonStyle}
-                >
+                <button className="Hbtn" onClick={goToNext} type="home">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="24px"
@@ -220,145 +175,106 @@ function Con() {
           </div>
         </div>
 
-        {/* Gap between */}
-        {/* <div style={{ padding: "50px" }} /> */}
-
         {/* Poductcs */}
-        <div
-          id="Product"
-          style={{
-            textAlign: "center",
-            maxWidth: "100%",
-            width: "100%",
-            height: "auto",
-            boxSizing: "border-box",
-          }}
-        >
-          <div style={{ backgroundColor: "#D9EAFD", padding: "10px" }}>
-            <div style={{ padding: "10px", marginBottom: "20px",textAlign: "center",}}>
-              <h2>Balaji Agro Industrice</h2>
-              <h3>Brings To You Quality Products</h3>
+        <div id="Product" >
+            <div style={{ padding: "10px", marginBottom: "20px",textAlign: "center",backgroundColor:"#D9EAFD"}}>
+              <Zoom duration={2000}><h1>Balaji Agro Industries</h1>
+              <h2 style={{color:"#39548e"}}>Brings To You Quality Products</h2></Zoom>
             </div>
 
-            <div class="productContainer" 
-              style={{ width: "100%" }}>
+            <div className="productContainer" 
+                style={{ width: "100%" }}>
 
-              <div class="Productimgs" style={{maxWidth:"50%", height: "auto",overflow: "hidden"}} >
-                <img
-                  src={myCollection[collectionIndex].imgPath}
-                  alt={myCollection[collectionIndex].label}
-                  style={{ width: "100%", height: "auto" }}
-                  onMouseOver={(e) => {e.target.style.zIndex.current = 10;}}
-                />
+              <div className="Productimgs">
+                <Slide left duration={1000}>
+                  <img
+                    src={myCollection[collectionIndex].imgPath}
+                    alt={myCollection[collectionIndex].label}
+                    onMouseOver={(e) => {e.target.style.zIndex.current = 10;}}/>
+                    </Slide>
               </div>
 
-              <div class='productDetail' style={{maxWidth:"50%"}}>
-                <h1>{myCollection[collectionIndex].name}</h1>
-                <p>{myCollection[collectionIndex].text}</p>
+              <div className='productDetail'>
+                  
+                  <Fade right duration={1000}><h1>{myCollection[collectionIndex].name}</h1>
+                  <p>{myCollection[collectionIndex].text}</p></Fade>
 
-                <div id="ProductButton" style={{display:'flex', flexDirection:'row', justifyContent:'center'}}>
-                  <button class='Pbtn' onClick={() => goToPrev("home")} style={buttonStyle}>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="24px"
-                      viewBox="0 -960 960 960"
-                      width="24px"
-                      fill="#5f6368"
-                    >
-                      <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
-                    </svg>
-                  </button>
-                  <button class='Pbtn' onClick={() => goToNext("home")} style={buttonStyle}>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="24px"
-                      viewBox="0 -960 960 960"
-                      width="24px"
-                      fill="#5f6368"
-                    >
-                      <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
-                    </svg>
-                  </button>
-                </div>
+                <div id="ProductButton">
+                    <Zoom duration={1000}>
+                    <button className='Pbtn' onClick={() => goToPrev("home")}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#5f6368"
+                      >
+                        <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
+                      </svg>
+                    </button>
+                    <button className='Pbtn' onClick={() => goToNext("home")}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#5f6368"
+                      >
+                        <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+                      </svg>
+                    </button>
+                    </Zoom>
+                  </div>
               </div>
             </div>
-
-            <div style={{ padding: "50px" }} />
           </div>
-
           {/* About */}
-          <div
-            id="About"
-            style={{
-              maxWidth: "100%",
-              width: "100%",
-              backgroundColor: "#BCCCDC",
-              padding: "50px",
-              top: "10px",
-              zIndex: 10,
-            }}
-          >
-            <h1
-              style={{
+          <div id="About">
+            <h1 style={{
                 textAlign: "center",
-                color: "black",
-                fontSize: "24px",
                 marginBottom: "20px",
-                maxWidth: "100%",
                 width: "100%",
-              }}
-            >
+                color: "#39548e",
+                backgroundColor:"#D9EAFD",}}
+              >
               About Us
             </h1>
 
-            <div id="AboutContainer"
-              style={{
-                boxSizing: "border-box",
-              }}
-            >
-              <p
-                style={{
-                  height: "100%",
-                  width: "100%",
-                  textAlign: "start",
-                  color: "black",
-                  margin: "20px",
-                  display: "flex",
-                  textAlign: "justify",
-                }}
-              >
-                Balaji Agro Industries is a family-owned business that has been
-                operating since 2015. We are dedicated to providing high-quality
-                agricultural products to our local community and beyond. Our
-                commitment to excellence and sustainability drives us to produce
-                the best in agro products. We take pride in our diverse range of
-                offerings and are always looking for ways to improve and expand
-                our product line.
-                <br />
-                <br />
-                Experience the essence of pure, farm-fresh goodness Our
-                state-of-the-art facilities ensure that the journey from field
-                to fork is seamless, guaranteeing the retention of maximum
-                flavor, nutrients, and freshness. We invite you to savor the
-                difference that our commitment to quality makes
-                <br />
-                <br />
-                We invite you to explore our website and learn more about our
-                company and the products we offer. Thank you for choosing Balaji
-                Agro Industries!
-              </p>
-              <img
-                src={about}
-                alt="About Us"
-                style={{
-                  margin: "10px",
-                  height: "50%",
-                  maxWidth: "100%",
-                  borderRadius: "20px",
-                }}
-              />
+              <div id="AboutContainer">
+                <Fade left duration={1000}>
+                  <p>
+                  Balaji Agro Industries is a family-owned business that has been
+                  operating since 2015. We are dedicated to providing high-quality
+                  agricultural products to our local community and beyond. Our
+                  commitment to excellence and sustainability drives us to produce
+                  the best in agro products. We take pride in our diverse range of
+                  offerings and are always looking for ways to improve and expand
+                  our product line.
+                  <br />
+                  <br />
+                  Experience the essence of pure, farm-fresh goodness Our
+                  state-of-the-art facilities ensure that the journey from field
+                  to fork is seamless, guaranteeing the retention of maximum
+                  flavor, nutrients, and freshness. We invite you to savor the
+                  difference that our commitment to quality makes
+                  <br />
+                  <br />
+                  We invite you to explore our website and learn more about our
+                  company and the products we offer. Thank you for choosing Balaji
+                  Agro Industries!
+                </p></Fade>
+                <Fade right duration={1000}>
+                <img
+                  src={about}
+                  alt="About Us"
+                  style={{
+                    margin: "10px",
+                    height: "50%",
+                    maxWidth: "100%",
+                    borderRadius: "20px 20px 20px 100px",
+                  }}/></Fade>
+              </div>
             </div>
-          </div>
         </div>
       </StyledText>
     </>
@@ -366,16 +282,5 @@ function Con() {
 }
 
 // Inline styling for buttons
-const buttonStyle = {
-  backgroundColor: "gray",
-  color: "white",
-  border: "none",
-  padding: "10px 20px",
-  fontSize: "16px",
-  cursor: "pointer",
-  borderRadius: "5px",
-  opacity: 0.8,
-  margin: "12px",
-};
 
 export default Con;
