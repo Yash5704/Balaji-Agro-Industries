@@ -29,11 +29,11 @@ function About() {
             <div className="AboutSec">
 
                 <section className='AboutLeft'>
-                    <Slide left duration={500} > <h1>Welcome to Balaji Agro Industries</h1> </Slide>
+                    <Slide left duration={500} > <h1>Welcome to Balaji Agro Products</h1> </Slide>
                     <br />
                     <Slide right duration={500}> <h1>We bring selected goods to you…</h1> </Slide>
                     <br />
-                    <Slide left duration={500}>  <p>Balaji Agro Industries is a team rooted to farmer’s background. Talking about farmers, they are the backbone of India and majority of the world rely on the farming industry of the country.</p> </Slide>
+                    <Slide left duration={500}>  <p>Balaji Agro Products is a team rooted to farmer’s background. Talking about farmers, they are the backbone of India and majority of the world rely on the farming industry of the country.</p> </Slide>
                 </section>
 
                 <section className='AboutRight'>
@@ -56,11 +56,11 @@ function About() {
                     
                     <Slide right duration={500}> 
                     <p>
-                        At Balaji Agro Industries, we are committed to providing top-quality agricultural products and solutions to farmers, traders, and businesses. Located in the heart of the APMC market, we specialize in premium agro products, fertilizers, seeds, pesticides, and farm essentials that help enhance productivity and yield.
+                        At Balaji Agro Products, we are committed to providing top-quality agricultural products and solutions to farmers, traders, and businesses. Located in the heart of the APMC market, we specialize in premium agro products, fertilizers, seeds, pesticides, and farm essentials that help enhance productivity and yield.
                             
                         With years of experience in the agro industry, we understand the needs of modern farming and ensure that our customers receive only the best quality products at competitive prices. Our team is dedicated to offering expert guidance, ensuring farmers and businesses make informed decisions for a prosperous agricultural future.
                             
-                        At Balaji Agro Industries, we believe in trust, quality, and innovation—supporting the agricultural community with excellence and reliability.
+                        At Balaji Agro Products, we believe in trust, quality, and innovation—supporting the agricultural community with excellence and reliability.
                     </p>
                     </Slide>
                 </div>
@@ -78,7 +78,7 @@ function About() {
                     → Customer-Centric Approach :– We prioritize our customers’ needs and offer expert guidance. <br />
                     → Competitive Pricing :- Fair prices for high-quality agricultural solutions. <br />
                     → Wide Product Range :– Everything a farmer needs, all under one roof. <br />
-                    → At Balaji Agro Industries, we don’t just sell; we build relationships with farmers and businesses, supporting them in their growth journey. <br />
+                    → At Balaji Agro Products, we don’t just sell; we build relationships with farmers and businesses, supporting them in their growth journey. <br />
                         📍 Visit us at APMC Market to experience quality and service like never before!
                     </p>
                     </Slide>

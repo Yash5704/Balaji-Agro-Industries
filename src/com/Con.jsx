@@ -22,7 +22,7 @@ function Con() {
       label: "Aranda",
       imgPath: Aranda,
       name: "Castor Seeds",
-      text: "Castor seeds are the source of castor oil, a versatile and highly valuable natural product. Castor oil is widely used in industries such as cosmetics, pharmaceuticals, and manufacturing. Known for its potent moisturizing properties, castor oil is a staple in skincare and hair care products, providing nourishment and promoting hair growth. It also serves as a base ingredient in soaps, lipsticks, and lotions. In the pharmaceutical sector, castor oil is employed as a natural laxative and is a component in certain medications and ointments.",
+      text: "Castor seeds are the source of castor oil, a versatile and highly valuable natural product. Castor oil is widely used in Products such as cosmetics, pharmaceuticals, and manufacturing. Known for its potent moisturizing properties, castor oil is a staple in skincare and hair care products, providing nourishment and promoting hair growth. It also serves as a base ingredient in soaps, lipsticks, and lotions. In the pharmaceutical sector, castor oil is employed as a natural laxative and is a component in certain medications and ointments.",
     },
 
     {
@@ -65,13 +65,13 @@ function Con() {
     {
       label: "temp1",
       imgPath: temp1,
-      name: "BALAJI AGRO INDUSTRIES",
+      name: "BALAJI AGRO Products",
       text: "WELCOME TO Balaji Agro Manufacturing! We take pride in producing high-quality agricultural products for our local community. With a strong commitment to excellence and sustainability.",
     },
     {
       label: "temp13",
       imgPath: temp13,
-      name: "BALAJI AGRO INDUSTRIES",
+      name: "BALAJI AGRO Products",
       text: "Experience the essence of pure, farm-fresh goodness Our state-of-the-art facilities ensure that the journey from field to fork is seamless, guaranteeing the retention of maximum flavor, nutrients, and freshness. We invite you to savor the difference that our commitment to quality makes.",
     },
   ];
@@ -178,7 +178,7 @@ function Con() {
         {/* Poductcs */}
         <div id="Product" >
             <div style={{ padding: "10px", marginBottom: "20px",textAlign: "center",backgroundColor:"#D9EAFD"}}>
-              <Zoom duration={2000}><h1>Balaji Agro Industries</h1>
+              <Zoom duration={2000}><h1>Balaji Agro Products</h1>
               <h2 style={{color:"#39548e"}}>Brings To You Quality Products</h2></Zoom>
             </div>
 
@@ -243,7 +243,7 @@ function Con() {
               <div id="AboutContainer">
                 <Fade left duration={1000}>
                   <p>
-                  Balaji Agro Industries is a family-owned business that has been
+                  Balaji Agro Products is a family-owned business that has been
                   operating since 2015. We are dedicated to providing high-quality
                   agricultural products to our local community and beyond. Our
                   commitment to excellence and sustainability drives us to produce
@@ -261,7 +261,7 @@ function Con() {
                   <br />
                   We invite you to explore our website and learn more about our
                   company and the products we offer. Thank you for choosing Balaji
-                  Agro Industries!
+                  Agro Products!
                 </p></Fade>
                 <Fade right duration={1000}>
                 <img

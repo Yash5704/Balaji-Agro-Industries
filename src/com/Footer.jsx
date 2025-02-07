@@ -18,8 +18,8 @@ function Footer() {
       <div className="footercontainer">
         <section  id="footer"  className="footer" >
           <div className="left">
-              <h2>Balaji Agro Industries</h2>
-              <p>'Balaji Agro Industries' is a team rooted to farmer’s background. The founders started the company by taking inspiration from their father who is a farmer.</p>
+              <h2>Balaji Agro Products</h2>
+              <p>'Balaji Agro Products' is a team rooted to farmer’s background. The founders started the company by taking inspiration from their father who is a farmer.</p>
           </div>
 
           <div className="Profooter">
@@ -63,7 +63,7 @@ function Footer() {
 
         <section>
           <div className="copyright">
-            <p><span>© 2025 Balaji Agro Industries All Rights Reserved</span></p>
+            <p><span>© 2025 Balaji Agro Products All Rights Reserved</span></p>
           </div>
         </section>
 

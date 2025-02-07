@@ -19,7 +19,7 @@ function Navbar() {
         {/* Logo Section */}
         <div className="logo">
           <span>BALAJI</span>
-          <p>AGRO INDUSTRIES</p>
+          <p>AGRO Products</p>
           {/* <img src={logo} alt="" /> */}
         </div>
 
